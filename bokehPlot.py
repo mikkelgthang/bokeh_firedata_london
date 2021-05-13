@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-import yaml
 from bokeh.layouts import column, row
 from bokeh.models import ColumnDataSource, Div, Select, Slider, TextInput, FactorRange, Legend, CheckboxGroup, CustomJS
 from bokeh.plotting import figure
@@ -49,7 +47,7 @@ df = firedata.copy()
 
 # Prepare axes
 x_axis = Select(title="X Axis (Time)", options=list(x_map.keys()), value="Hourly")
-y_axis = Select(title="Y Axis (Occurances)", options=list(y_map.keys()), value="Incident Group")
+y_axis = Select(title="Y Axis (Occurrences)", options=list(y_map.keys()), value="Incident Group")
 data_edit = Select(title="Data manipulation", options=list(data_map.keys()), value="Normalized")
 
 def filterData():
