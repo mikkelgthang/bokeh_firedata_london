@@ -9,6 +9,7 @@ from bokeh.io import show, curdoc
 firedata = pd.read_pickle("./firedata2020.pkl")
 
 daysOrdered = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 x_map = {
     "Hourly": {
         "id": "HourOfCall",
@@ -20,11 +21,11 @@ x_map = {
     },
     "Monhtly": {
         "id": "MonthOfCall",
-        "time": [str(x) for x in range(1, 13)]
+        "time": months
     },
     "Yearly": {
         "id": "CalYear",
-        "time": ['2020'] #[str(x) for x in range(2009, 2022)]
+        "time": [str(x) for x in range(2009, 2022)]
     }
 }
 
